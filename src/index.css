@@ -1,5 +1,8 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
+  background-repeat: no-repeat;
+   background-size: cover;
+
   margin: 20px;
 background: url("https://chupacdn.s3.amazonaws.com/catalog/product/cache/1/thumbnail/1280x/17f82f742ffe127f42dca9de82fb58b1/6/-/6-vector-game-backgrounds-8003_imgs_8003_2.png");
 position: cover;
