@@ -1,0 +1,64 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+background: url("https://chupacdn.s3.amazonaws.com/catalog/product/cache/1/thumbnail/1280x/17f82f742ffe127f42dca9de82fb58b1/6/-/6-vector-game-backgrounds-8003_imgs_8003_2.png");
+position: cover;
+}
+
+ol, ul {
+  padding-left: 30px;
+
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #41d1ea;
+  color: white;
+
+  border: 3px solid white;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 8rem;
+  margin-right: 25px;
+  margin-top: 25px;
+
+  text-align: center;
+  width: 8rem;
+  border-radius: 41.5%;
+}
+
+.square:focus {
+  outline: none;
+}
+.possition{
+  padding-right: 100px;
+
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.game-info {
+  margin-left: 20px;
+  padding-left: 10em;
+}
