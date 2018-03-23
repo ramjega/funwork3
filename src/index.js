@@ -112,9 +112,15 @@ class Game extends React.Component {
     let status;
     if (winner) {
 
+      this.jumpTo(0)
+
       status = alert("Winner: " + (this.state.xIsNext ?  player2 : player1 ));
 
-    } else {
+
+    } else if (this.state.stepNumber > 8) {
+        this.jumpTo(0)
+      status = alert("game tie")
+    }else {
       status = "Next player: " + (this.state.xIsNext ? player1 :  player2);
     }
 
@@ -125,6 +131,11 @@ class Game extends React.Component {
             squares={current.squares}
             onClick={i => this.handleClick(i)}
           />
+        </div>
+        <div>
+        <button className="" onClick={() => this.setState({
+          stepNumber: 0
+        })}>Restart</button>
         </div>
         <div className="game-info">
           <div>{status}</div>
@@ -157,4 +168,28 @@ function calculateWinner(squares) {
     }
   }
   return null;
+}
+
+
+function showPlayer() {
+    document.getElementById('player').style.display = 'inline';
+    showGame();
+    this.jumpTo(0)
+
+
+
+}
+function showGame() {
+  document.getElementById('root').style.display = 'inline';
+formMsg();
+
+
+}
+function formMsg() {
+  document.getElementById('formmsg').style.display = 'none';
+
+
+}
+function startMsg() {
+
 }
