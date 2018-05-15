@@ -94,7 +94,7 @@ class Game extends React.Component {
     const winner = calculateWinner(current.squares);
     var player1= document.getElementById('player1').value;
     var player2= document.getElementById('player2').value;
-     document.getElementById('player').innerHTML = "player1 = " + player1 + "<br> " + "player2 = " + player2;
+    document.getElementById('player').innerHTML = "player1 = " + player1 + "<br> " + "player2 = " + player2;
 
     const moves = history.map((step, move) => {
       const desc = move ?
@@ -168,28 +168,4 @@ function calculateWinner(squares) {
     }
   }
   return null;
-}
-
-
-function showPlayer() {
-    document.getElementById('player').style.display = 'inline';
-    showGame();
-    this.jumpTo(0)
-
-
-
-}
-function showGame() {
-  document.getElementById('root').style.display = 'inline';
-formMsg();
-
-
-}
-function formMsg() {
-  document.getElementById('formmsg').style.display = 'none';
-
-
-}
-function startMsg() {
-
 }
